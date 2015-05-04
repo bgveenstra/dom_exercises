@@ -67,6 +67,7 @@ For the heading, we wanted to change what was between two matching tags for an e
 
 - What was different about the way we changed the `style` of the image
   from the way we changed its `src`?     
+
 The `style` and `src` are both attributes of the diagram element. We could have switched it up and used dot notation for `src`:
 ```
 (diagram.src = "img/dom_model.svg");
