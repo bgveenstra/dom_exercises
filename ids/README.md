@@ -61,9 +61,23 @@ diagram.setAttribute("src", "img/dom_model.svg");
 ## Questions
 
 - Why do we use `.innerHTML` to change the heading but `.setAttribute`
-  to change the diagram?
- For the heading, we wanted to change what was between the opening `<h1>` tag and the matching closing `</h1>` tag. That is the element's "inner HTML".  For the diagram, we wanted to change something *inside* the `<img>` tag itself, not some HTML between two matching tags. We can't use `.innerHTML` for that.    
+  to change the diagram?   
+ 
+For the heading, we wanted to change what was between two matching tags for an element: the opening `<h1>` tag and the closing `</h1>` tag. That stuff is the element's "inner HTML".  For the diagram, we wanted to change something *inside* the `<img>` tag itself, not some HTML between two matching tags. We can't use `.innerHTML` for that.    
 
 - What was different about the way we changed the `style` of the image
-  from the way we changed its `src`?
-The `style` and `src` are both attributes of the diagram element. We could have used dot notation for both or used the `.setAttribute` method for both. There are some differences, though. One resource to read about them is https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute.
+  from the way we changed its `src`?     
+The `style` and `src` are both attributes of the diagram element. We could have switched it up and used dot notation for `src`:
+```
+(diagram.src = "img/dom_model.svg");
+```
+or used the `.setAttribute` method for `style`:
+```
+diagram.setAttribute("style", "height: '300px'");
+```
+Note that since `style` is the attribute of the diagram who's value we're trying to set, we have to include everything about the style in the second argument when we use setAttribute. The following doesn't work:
+```
+// DOES NOT WORK
+diagram.setAttribute("style.height", "300px");
+```
+One resource to read about setAttribute is `https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute`.
