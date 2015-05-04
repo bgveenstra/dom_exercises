@@ -58,7 +58,10 @@ for (var i = 0; i < allFuns.length; i++) {
 
 - What are the differences between `.getElementById`,
   `.getElementsByClassName`, `.getElementsByTagName`, and
-  `querySelectorAll`?
-  Whereas each of the `.getElementBy_______` methods is specific to only one type of search, `.querySelectorAll` can match ids, classes, or tags based on the argument given.  Tags are passed normally, ids are passed with a # in front, and class names are passed with a . in front. 
-- How did you loop over the lists of elements?
-The lists of elements returned aren't arrays, they're arry like objects called NodeLists. Thankfully, these still support `.length` and looking up elements with indices in brackets, so a simple for loop worked. 
+  `querySelectorAll`?   
+
+ Each of the `.getElementBy_______` methods is specific to only one type of search (tag, id, or class). On the other hand, `.querySelectorAll` can match ids, classes, or tags based on the argument given.  Tags are passed to `.querySelectorAll` normally, ids are passed with a `#` in front, and class names are passed with a `.` in front.    
+ 
+- How did you loop over the lists of elements?    
+
+The lists of elements returned aren't arrays, they're arry like objects called NodeLists. Thankfully, these still support `.length` and looking up elements with bracket notation, so a simple for loop worked. 
