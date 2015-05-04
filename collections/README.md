@@ -21,7 +21,7 @@ var allLis = document.querySelectorAll("li");
 - Set `.style.borderBottom` on *each* of them.
 ```
 for (var i = 0; i < allLis.length; i++) {
-	allLis[i].style.borderBottom = "thick blue"; 
+	allLis[i].style.borderBottom = "thick dotted green"; // or your favorite style 
 }
 ```
 
@@ -31,13 +31,13 @@ for (var i = 0; i < allLis.length; i++) {
 - Use `.querySelectorAll` to retrieve all of the elements with
   the class of `datatype`.
 ```
-var allData = document.querySelectorAll(".datatype");
+var allDataTypes = document.querySelectorAll(".datatype");
 ```
 - Turn all of them `red`.
 - Hint: you'll need to use the `.style.color` property and loop over each element.
 ```
-for (var i = 0; i < allData.length; i++) {
-	allData[i].style.color = "red"; 
+for (var i = 0; i < allDataTypes.length; i++) {
+	allDataTypes[i].style.color = "red"; 
 }
 ```
 
